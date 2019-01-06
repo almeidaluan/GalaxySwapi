@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  web:
+    build: .
+    tty: true
+    ports:
+      - "5000:5000"
+
+    env_file: .env
+    volumes:
+      - .:/GalaxySwapi:Z
+    command:
+      ["./startgalaxyswapi.sh",]
